@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<main>
+    <ol>
+        <h1>JavaScript Notes</h1>
+
+
+        <h2>Data Types</h2>
+
+        <p>There are 8 datatypes in JavaScript</p>
+        <ol>
+
+            <h3>Number</h3>
+            <p>Any number, including numbers with decimals: 4, 8, 1516, 23.42. </p>
+            <P>JavaScript does not differentiate between floats and integers</p>
+            <br>
+
+            <h3>String</h3>
+            <p>Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by
+                single quotes: ' ... ' or double quotes " ... ", though we prefer single quotes. Some people like to
+                think
+                of string as a fancy word for text.</p>
+            <br>
+
+
+            <h3>Boolean</h3>
+            <p>This data type only has two possible values— either true or false (without quotes). It’s helpful to
+                think of booleans as on and off switches or as the answers to a “yes” or “no” question.</p>
+            <br>
+
+
+            <h3>Null</h3>
+            <p>This data type represents the intentional absence of a value, and is represented by the keyword null.</p>
+            <br>
+
+
+            <h3>Undefined</h3>
+            <p>This data type is denoted by the keyword undefined (without quotes). It also represents the
+                absence of a value though it has a different use than null. undefined means that a given value does not
+                exist.</p>
+            <br>
+
+
+            <h3>Symbol</h3>
+            <p>A newer feature to the language, symbols are unique identifiers, useful in more complex coding. </p>
+            <br>
+
+
+            <h3>Object</h3>
+            <p>Collections of related data.</p>
+            <br>
+
+
+            <h3>BigInt</h3>
+            <p>Numbers between 9007199254740991 +(2^53-1) & -9007199254740991 +(2^53-1) and be safely stored. But
+                numbers outside of this range needs to be declared as a bigint, otherwise they will be rounded and lose
+                precision.</p>
+        </ol>
+
+        <h2>Operators</h2>
+        <h3>Aritmetic operators</h3>
+        <table border="1">
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Subtraction</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>Exponentiation</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Division</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Modulus (Remainder)</td>
+            </tr>
+            <tr>
+                <td>++</td>
+                <td>Increment</td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>Decrement</td>
+            </tr>
+        </table>
+
+        <h3>Assignment Operators</h3>
+        <table border="1">
+            <tr>
+                <th>Operator</th>
+                <th>Example</th>
+                <th>Same As</th>
+            </tr>
+            <tr>
+                <td>=</td>
+                <td>x = y</td>
+                <td>x = y</td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>x += y</td>
+                <td>x = x + y</td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>x -= y</td>
+                <td>x = x - y</td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>x *= y</td>
+                <td>x = x * y</td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>x /= y</td>
+                <td>x = x / y</td>
+            </tr>
+            <tr>
+                <td>%=</td>
+                <td>x %= y</td>
+                <td>x = x % y</td>
+            </tr>
+            <tr>
+                <td>**=</td>
+                <td>x **= y</td>
+                <td>x = x ** y</td>
+            </tr>
+        </table>
+
+        <h3>Comparison operators</h3>
+        <table border="1">
+            <tr>
+                <th>Operator</th>
+                <th>Udtryk</th>
+                <th>Eksempel</th>
+                <th>True or false?</th>
+            </tr>
+            <tr>
+                <td><</td>
+                <td>Mindre end</td>
+                <td>2 < 5</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td><=</td>
+                <td>mindre end eller lig med</td>
+                <td>5 <= 5</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>lig med</td>
+                <td>3 == 3</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>ikke lig med</td>
+                <td>3!=3</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>></td>
+                <td>større end</td>
+                <td>2>1</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>>=</td>
+                <td>større end eller lig med</td>
+                <td>2>=3</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>===</td>
+                <td>lig med og samme type</td>
+                <td>'4'===4</td>
+                <td>false</td>
+            </tr>
+        </table>
+        <h3>Logical operators</h3>
+        <ul>
+            <li>&&</li>
+            <li>||</li>
+            <li>!</li>
+        </ul>
+        <h3>Increment and Decrement operator</h3>
+        <ul>
+            <li>Increment operator <br>
+                a++
+            </li>
+            <li>Decrement operator <br>
+                a--
+            </li>
+        </ul>
+
+        <h3>Typeof operator</h3>
+        <p>Checks value to its right and returns a string of the datatype</p>
+        <p>
+            const unknown1 = 'foo'; <br>
+            console.log(typeof unknown1); // Output: string <br>
+            <br>
+            const unknown2 = 10; <br>
+            console.log(typeof unknown2); // Output: number <br>
+            <br>
+            const unknown3 = true; <br>
+            console.log(typeof unknown3); // Output: boolean
+        </p>
+
+        <h2>Properties and Methods</h2>
+        <p>Properties(egenskaber) are named values associated with an Object. fx. An object called "person" would
+            probably
+            have the properties "name", "age" and "gender"</p>
+        <p>Methods is a function that is a property of an object.</p>
+        <h3>String properties</h3>
+        <ul>
+            <li>.length <br>
+                every string instance has a property called length that stores the number of characters in that string.
+                You
+                can retrieve property information by appending the string with a period and the property name:
+                <ul>
+                    <p>
+                        console.log('my string'.length); <br>
+                        Will log the amount of characters in the above strong, which is 9 here.
+                    </p>
+                </ul>
+            </li>
+        </ul>
+        <h3>Strings methods</h3>
+        <ul>
+            <li>.toUpperCase()</li>
+            <ul>
+                <p>
+                    The whole string is logged in uppercase letters
+                </p>
+            </ul>
+            <li>.toLowerCase()</li>
+            <ul>
+                <p>
+                    The whole string is logged in lowercase letters
+                </p>
+            </ul>
+            <li>.trim()</li>
+            <ul>
+                <p>
+                    Will remove whitespace inside the string
+                </p>
+            </ul>
+            <li>.startsWith('H')</li>
+            <ul>
+                <p>This will return a boolean, does the string start with the letter h? yes or no</p>
+            </ul>
+            
+            <p>.startsWith("")</p>
+            <p>.endsWith("")</p>
+            <p>.includes("")</p>
+            <p>.search("")</p>
+        </ul>
+
+
+
+
+        <h2>Built-in Objects</h2>
+        <p>Built-in Objects are collections of methods and properties that JavaScript </p>
+        <ul>
+            <li>Math<br>
+                Math contains a few methods such as:
+                <ul>
+                    <li>.random()</li>
+                    <li>.floor()</li>
+                    <li>.ceil()</li>
+                </ul>
+                <p>
+                    console.log(Math.random() * 50); <br>
+                    will log a random number, most likely with decimals from 0 to 50
+                </p>
+                <p>
+                    console.log(Math.floor(Math.random() * 50)); <br>
+                    will log a random number without decimals from 0 to 50
+                </p>
+                <p>
+                    console.log(Math.floor(Math.random() * 10) + 90); <br>
+                    will log a random number without decimals in a range of 10, from 90 and up.
+                </p>
+                <p>
+                    console.log(Math.ceil(43.8)); <br>
+                    will log a the closest integer to the number in parenthesis.
+                </p>
+            </li>
+            <li>Number</li>
+            Obejct number contains a few methods such as:
+            <ul>
+                <li>.isInteger()</li>
+            </ul>
+        </ul>
+        <h2>Variables</h2>
+        <p>a variable is a container for a value. Below are the keywords to used to create variables:</p>
+        <ul>
+            <li>var</li>
+            <li>let</li>
+            <p>variables assigned using let can have their value be reassigned a different value.</p>
+            <p>let fruit = 'apple'; <br>
+                console.log(fruit); logs apple <br>
+                fruit = 'pear'; <br>
+                console.log(fruit); logs pear
+            <li>const</li>
+            <p> A const variable cannot be reassigned because it is constant.</p>
+            <p>If reassigned a new value, you will get a TypeError.</p>
+        </ul>
+
+        <h2>Strings extra</h2>
+        <h3>String Interpolation</h3>
+        <p>an easier way to type in strings that contain script</p>
+        <p>Be aware that the string has to be wrapped with `` not "" or ´´</p>
+        <p>let myName = "Isa"; <br>
+            let myCity = "Aalborg"; <br>
+            console.log(`My name is ${myName}. My favorite city is ${myCity}`);</p>
+
+        <h3>String Concatenation</h3>
+        <p>A way to connect string values, even when those values are stored in variables, using +</p>
+        <p>
+            let YourName = "Henry"; <br>
+            console.log("Hej med dig" + " " + YourName + ".";) <br>
+            output in log: "Hej med dig Henry." <br>
+        </p>
+
+        <h2>Conditional statements</h2>
+        <ul>
+            <li>if</li>
+            <li>else</li>
+            <li>else if <br>
+                Else if allows for more than two outcomes. You can add as many else if statements as you want. The else
+                if
+                statement comes after the if statement and before the else statement.
+            </li>
+        </ul>
+        <h3>The Switch keyword</h3>
+        <p>Else if statements can become quite long and overwhelming, which is when we can use the switch keyword</p>
+        <p>before:</p>
+        <p>
+            let athleteFinalPosition = 'first place'; <br>
+            <br>
+            if (athleteFinalPosition === 'first place') { <br>
+            console.log('You get the gold medal!'); <br>
+            } else if (athleteFinalPosition === 'second place') { <br>
+            console.log('You get the silver medal!'); <br>
+            } else if (athleteFinalPosition === 'third place') { <br>
+            console.log ('You get the bronze medal!'); <br>
+            } else { <br>
+            console.log('No medal awarded.'); <br>
+            }
+        </p>
+        <p>After:</p>
+        <p>
+            let athleteFinalPosition = 'first place'; <br>
+            <br>
+            switch (athleteFinalPosition) { <br>
+            case 'first place': <br>
+            console.log('You get the gold medal!'); <br>
+            break; <br>
+            case 'second place': <br>
+            console.log('You get the silver medal!'); <br>
+            break; <br>
+            case 'third place': <br>
+            console.log('You get the bronze medal!'); <br>
+            break; <br>
+            default: <br>
+            console.log('No medal awarded.'); <br>
+            break; <br>
+            }
+        </p>
+        <p>Break keywod will stop the remaining cases from being checked.</p>
+
+
+        <h2>Truthy or Falsy?</h2>
+        <h3>Falsy values</h3>
+        <p>These values will be evaluated as false when checked.</p>
+        <ul>
+            <li>0</li>
+            <li>Empty strings like "" or ''</li>
+            <li>Null</li>
+            <li>Undefined</li>
+            <li>Nan or Not a Number</li>
+        </ul>
+
+        <h2>Ternary operator</h2>
+        <p>A way to simplify the syntax of an if else statement</p>
+        <p>Before:</p>
+        <p>
+            let isNightTime = true; <br>
+            <br>
+            if (isNightTime) { <br>
+            console.log('Turn on the lights!'); <br>
+            } else { <br>
+            console.log('Turn off the lights!'); <br>
+            } <br>
+        </p>
+        <p>After:</p>
+        <p>
+            let isNightTime = true; <br>
+            <br>
+            isNightTime ? console.log('Turn on the lights!') <br>
+            : console.log('Turn off the lights!'); <br>
+        </p>
+
+        <H2>Functions</H2>
+        <p>A function is a reusable piece of code that can accept input and performs a specific task</p>
+        <ul>
+            <li></li>
+        </ul>
+        <script>
+            function plantNeedsWater1(day) {                         //First iteration of a function declartion
+                if (day === 'Wednesday') {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            const plantNeedsWater2 = function (day) {                 //Second iteration of a function declartion using function expression
+                return day === 'Wednesday';
+            }
+
+            const plantNeedsWater3 = (day) => {                      //Third iteration of a function declartion, and best one
+                return day === 'Wednesday';
+            }
+
+            const plantNeedsWater4 = (day) => {                      //Fourth iteration, using ternary, den klager hvis der bare står true og false
+                return day === 'Wednesday' ? "true" : "false";
+            };
+
+            const plantNeedsWater5 = (day) => day === 'Wednesday';   //Fifth iteration of a function declartion
+
+
+            plantNeedsWater5('Wednesday');
+            console.log(plantNeedsWater5('Wednesday'));
+        </script>
+
+        <h3>Parameters</h3>
+        <p>The purpose of parameters is to allow a function to accept data.</p>
+        <p>Arguments are the values passed into a function. Parameters act as placeholders for argument values.</p>
+
+        <h3>Default values</h3>
+        <script>
+            const eatFruit = (fruit = 'apple') => {                 //fruit gets a default value of the string apple
+                console.log(`This ${fruit} is delicious!`);
+            };
+
+            eatFruit();
+        </script>
+
+        <h3>Consice body</h3>
+        <p>Concise body syntax (with one parameter) does not use parentheses, curly braces, or the return keyword.</p>
+
+        <h3>Scope</h3>
+        <p>refers to where variables can be accessed throughout the program, and is determined by where and how they are
+            declared.</p>
+        <ul>
+            <li>Global variables <br>
+                Global variables are declared outside of blocks{} but can be used inside of functions, and is stored in
+                the
+                global namespace.<br>
+                The Global namespace can reach a point where there is too many variables, which is called Scope
+                Pollution.
+                Scope pollution makes it difficult to keep track of variables, and variables might collide with locally
+                scoped.
+            </li>
+            <li>Local variables <br>
+                Local variables are defined inside blocks of code {} and we refer to those as being or having block
+                scope.
+                cannot be used outside of a function.
+            </li>
+        </ul>
+
+        <h2>JavaScript loading</h2>
+        <p>Defer vs async?</p>
+        <p>Adding the defer attribute to a script result in that script running after the HTML document has been parsed,
+            useful if the script depends on the html or other scripts</p>
+        <p>or: The defer attribute of a tag is a boolean attribute used to indicate that the script can be loaded but
+            not
+            executed until after the HTML document is fully parsed.</p>
+        <p>Scripts are loaded synchronously as they appear in an HTML file, before the following HTML is loaded and
+            parsed.
+            The async attribute can be used to load the scripts asynchronously, such that they will load in the
+            background
+            without blocking the HTML parser from continuing.</p>
+
+        <h2>The Document Object Model (DOM)</h2>
+        <p>The DOM is a logical tree-like Model that organizes a web page’s HTML Document as an Object.</p>
+        <p>The DOM also allows access to the attributes of an HTML element such as style, id, etc.</p>
+        <p>The document object (document.) allows scripts to access children of the DOM as properties.</p>
+
+        <h2>Select and Modify Elements</h2>
+        <ul>
+            <li>.querySelector() <br>
+                <p>The .querySelector() method allows us to specify a CSS selector as a string and returns the first
+                    element
+                    that matches that selector.</p>
+            </li>
+            <li>.getElementById() <br>
+                <p>To access an element directly by its id, you can use the aptly named .getElementById() method</p>
+            </li>
+            <li>.getElementsByClassName() <br>
+                <p>Return an array of elements unless we specific which index we want by adding []</p>
+            </li>
+            <li>.getElementsByTagName() <br>
+                <p>Return an array of elements unless we specific which index we want by adding []</p>
+            </li>
+        </ul>
+        <br>
+        <p>The main difference between querySelector() and getElementsByTagName() is that querySelector() returns the
+            first
+            matching element it finds, while getElementsByClassName() returns a collection of elements (an
+            HTMLCollection)
+            that match the specified class name.</p>
+        <p>So, if you want to select the first element that matches a specific class name, you should use
+            querySelector().</p>
+        <p>On the other hand, if you want to select all elements that match a specific class name, you should use
+            getElementsByClassName().</p>
+
+        <h1>Appending, removing and creating elements</h1>
+        <p>You can create, append, and remove elements by using the methods: </p>
+        <ul>
+            <li>.createElement() creates an element in memory</li>
+            <li>.appendChild() adds a child to an existing parent element in the DOM</li>
+            <li>.removeChild() removes a child from an existing parent element in the DOM</li>
+        </ul>
+    </ol>
+</main>
+</body>
+</html>
